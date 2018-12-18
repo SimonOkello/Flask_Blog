@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends layout.html %}
+
+{% block content %}
+<div class="container">
+    <form action="" method="POST">
+        {{ form.hidden_tag()}}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Join Today</legend>
+            <div class="form-group">
+                {{ form.username.lebel(class = "form-control-lebel") }}
+                {{ form.username(class = "form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.email.lebel(class = "form-control-lebel") }}
+                {{ form.email(class = "form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.password.lebel(class = "form-control-lebel") }}
+                {{ form.password(class = "form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.confirm_password.lebel(class = "form-control-lebel") }}
+                {{ form.confirm_password(class = "form-control form-control-lg") }}
+            </div>
+
+        </fieldset>
+        <div class="form-group">
+            {{ form.submit(class = "btn btn-outline-info") }}
+
+        </div>
+    </form>
+    <div class="border-top pt-3">
+        <small class="muted">
+            Already Have an Account? <a class="ml-2" href="{{ url_for('login')}}">SignIn </a>
+        </small>
+
+    </div>
+
+</div>
+{% endblock %}
