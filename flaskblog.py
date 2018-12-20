@@ -31,8 +31,8 @@ class Post(db.Model):
         return f"Post('{self.title}', '{self.date_posted}')"
            
 
-
-posts = [
+#dumy data
+"""posts = [
     {
         'Author': 'Corey Schafer',
         'Title': 'Blog Post 1',
@@ -46,7 +46,7 @@ posts = [
         'Date': 'April 21, 2018'
     }
 ]
-
+"""
 
 @app.route("/")
 @app.route("/home")
